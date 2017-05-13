@@ -1,4 +1,4 @@
-package cn.bjut.ai.aop;
+package cn.ai.aop;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
@@ -16,7 +16,7 @@ import java.lang.reflect.Method;
 @Aspect
 @Component
 public class LogAspect {
-    @Pointcut("@annotation(cn.bjut.ai.aop.Action)")
+    @Pointcut("@annotation(cn.ai.aop.Action)")
     public void annotationPointCut(){};
 
     @After("annotationPointCut()")
@@ -27,7 +27,7 @@ public class LogAspect {
         System.out.println("注解式拦截 " + action.name());
     }
 
-    @Before("execution(* cn.bjut.ai.aop.DemoMethodService.*(..))")
+    @Before("execution(* cn.ai.aop.DemoMethodService.*(..))")
     public void before(JoinPoint joinPoint){
         MethodSignature methodSignature = (MethodSignature) joinPoint.getSignature();
         Method method = methodSignature.getMethod();

@@ -1,4 +1,4 @@
-package cn.bjut.ai.aop;
+package cn.ai.aop;
 
 import java.lang.annotation.*;
 
