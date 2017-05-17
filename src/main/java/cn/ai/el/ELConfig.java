@@ -20,7 +20,7 @@ import java.io.IOException;
 
 @ComponentScan("cn.ai.el")
 @Configuration
-@PropertySource(value = "classpath:cn/ai/el/test.properties")
+@PropertySource(value = "classpath:/cn/ai/el/test.properties")
 public class ELConfig {
 
     @Value("I Love You!")
@@ -35,7 +35,7 @@ public class ELConfig {
     @Value("#{demoService.another}")
     private String fromAnother;
 
-    @Value("classpath:cn/bjut/ai/el/test.txt")
+    @Value("classpath:/cn/ai/el/test.txt")
     private Resource testFile;
 
     @Value("http://www.baidu.com")
@@ -70,7 +70,7 @@ public class ELConfig {
             e.printStackTrace();
         }
 
-        System.out.println("bookAuthor "+bookName);
+        System.out.println("bookName "+bookName);
         System.out.println("environment.getProperty "+environment.getProperty("book.author"));
     }
 

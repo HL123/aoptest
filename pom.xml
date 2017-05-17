@@ -44,6 +44,11 @@
             <version>2.4</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>4.2.4.RELEASE</version>
+        </dependency>
 
         <dependency>
             <groupId>junit</groupId>
@@ -53,5 +58,18 @@
     </dependencies>
 
 
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.*</include>
+                </includes>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+        </resources>
+    </build>
 
 </project>
